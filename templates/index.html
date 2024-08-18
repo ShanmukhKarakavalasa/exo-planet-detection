@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exoplanet Detection</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 500px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px 0px #000;
+        }
+        h1 {
+            text-align: center;
+        }
+        input[type="text"], input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+        input[type="submit"] {
+            background-color: #28a745;
+            color: #fff;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Exoplanet Detection</h1>
+    <form action="/predict" method="POST">
+        <label for="flux1">Flux 1:</label>
+        <input type="text" name="flux1" required>
+        <label for="flux2">Flux 2:</label>
+        <input type="text" name="flux2" required>
+        <label for="flux3">Flux 3:</label>
+        <input type="text" name="flux3" required>
+        <label for="flux4">Flux 4:</label>
+        <input type="text" name="flux4" required>
+        <label for="flux5">Flux 5:</label>
+        <input type="text" name="flux5" required>
+        <label for="flux6">Flux 6:</label>
+        <input type="text" name="flux6" required>
+        <label for="flux7">Flux 7:</label>
+        <input type="text" name="flux7" required>
+        <label for="flux8">Flux 8:</label>
+        <input type="text" name="flux8" required>
+        <label for="flux9">Flux 9:</label>
+        <input type="text" name="flux9" required>
+        <input type="submit" value="Predict Exoplanet">
+    </form>
+    {% if prediction_text %}
+        <h2>{{ prediction_text }}</h2>
+    {% endif %}
+</div>
+
+</body>
+</html>
